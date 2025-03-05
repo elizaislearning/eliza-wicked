@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eliza's Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&display=swap" rel="stylesheet">
+
+</style>
+
+  <style>
+     body {
+  font-family: "DM Sans", sans-serif;
+  background-color: #97D700;
+  color: #393E46;
+}
+
+h1 {
+  font-family: 'Cormorant Garamond', serif;;
+}
+
+.navbar {
+  font-family: "DM Serif Text", serif;
+  background-color: #FF66C4 !important;
+}
+.navbar-nav .nav-link {
+  transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+  font-size: 20px !important; 
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFCFDF !important; /* Change text color on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+.gradient-background {
+  background: linear-gradient(-70deg,#FF66C4, #FFF6DA, #97D700);
+  background-size: 180% 180%;
+  animation: gradient-animation 4s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.btn-custom {
+  background-color: #FF66C4 !important; /* Sets the background color */
+  color: white !important; /* Ensures text is visible */
+  border: none; /* Removes border */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-custom:hover {
+  background-color: #97D700 !important; /* Slightly darker green on hover */
+}
+
+  </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #FFB6B9;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#hello">About Me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Learnings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <div class="container">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./resume_img/Wick1.png" class="d-block w-100" alt="learning never ends, help. smiley face">
+          </div>
+          <div class="carousel-item">
+            <img src="./resume_img/Wick2.png" class="d-block w-100" alt="Living on curiosity and WiFi.">
+          </div>
+          <div class="carousel-item">
+            <img src="./resume_img/Wick3.png" class="d-block w-100" alt="Errors make me stronger.">
+          </div>
+        </div>
+      </div>
+    </div>    
+
+    <div id="hello" class="px-4 pt-5 pb-5 my-5 text-center border-bottom" style="background-color: #FFCFDF;">
+        <h1 class="display-4 fw-bold text-body-emphasis">Hello there!</h1>
+        <div class="col-lg-6 mx-auto">
+            <div class="d-flex justify-content-center my-4">
+                <img src="resume_img/mi avatar.png" alt="Profile Image" 
+                     class="img-fluid rounded-circle" style="width: 200px; height: 200px;">
+            </div>
+            <p class="lead mb-4">Hi, I'm Eliza!</p>
+            <p>I'm eager to learn and explore new things. Recently, I discovered a newfound passion, <i>coding</i>. I love tackling problems and solving them head on plus the sense of accomplishment after cracking a tough challenge - it's so rewarding, isn't it?
+            </p>
+            <p>I'm also studying Digital Marketing at UPOU right now. <i>I know. That's what makes me so nice!</i> Especially with four lovely dogs to take care of, I think I was born to <i>defy gravity.</i> During my free time (do I still have that anymore?), I also create <i>wicked</i> scented candles . But hey, not complaining here! As long as I  <u>never stop learning</u>, I think I know I'm exactly where I'm meant to be - <i>unlimited!</i>✨</p>
+            </p>
+            
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <a href="https://www.linkedin.com/in/ruth-eliza-bausas/" 
+                   class="btn btn-custom btn-lg px-4" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   Connect With Me
+                </a>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="skills" class="px-4 pt-5 pb-5 my-5 text-center border-bottom gradient-background">
+      <h1 class="display-4 fw-bold text-body-emphasis mb-4">My Recent Learnings</h1>
+  
+      <div class="col-lg-8 mx-auto"> <!-- Made it wider for better readability -->
+          <div class="mb-5">
+              <p class="lead fw-semibold">Principles of Graphic Design</p>
+              <p class="text-muted">University of the Philippines Open University (Feb 2025)</p>
+          </div>
+  
+          <div class="mb-5">
+              <p class="lead fw-semibold">Digital Product Management: From Strategy to Launch</p>
+              <p class="text-muted">National University of Singapore (Nov 2024)</p>
+          </div>
+  
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">    
+              <a href="https://nusingapore.credential.getsmarter.com/705d7784-ab0c-4103-bfbe-199ab5fbc71e" 
+                 class="btn btn-custom btn-lg px-4" 
+                 target="_blank" 
+                 rel="noopener noreferrer">
+                View Credential
+              </a>
+          </div>              
+      </div>
+  </div>
+  
+    
+      <div id="contact" class="px-4 pt-5 pb-5 my-5 text-center border-bottom" style="background-color: #FFE3E1;">
+        <h1 class="display-4 fw-bold text-body-emphasis">Contact Me!</h1>
+    
+        <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">Let's Connect!</p>
+            <p><strong>Phone:</strong> +639688544548</p>
+            <p><strong>Email:</strong> elizaisworking@gmail.com</p>
+            <p><strong>Location:</strong> Rizal, Philippines</p>
+    
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <a href="https://www.linkedin.com/in/ruth-eliza-bausas/" 
+                   class="btn btn-custom btn-lg px-4" 
+                   target="_blank" 
+                   rel="noopener noreferrer">
+                   LinkedIn
+                </a>
+            </div>
+        </div>
+    </div>
+    
+          </div>
+        </div>
+      </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
