@@ -24,6 +24,18 @@
     padding-top: 80px; /* More space for mobile screens */
   }
 }
+/* Ensure sections stop below navbar */
+#hello, #skills, #testimonials, #contact {
+  scroll-margin-top: 90px; /* Adjust based on navbar height */
+}
+
+/* More space for mobile screens */
+@media (max-width: 576px) {
+  #hello, #skills, #testimonials, #contact {
+    scroll-margin-top: 110px; /* Increase margin for smaller screens */
+  }
+}
+
 h1 {
   font-family: 'Cormorant Garamond', serif;;
 }
@@ -70,6 +82,68 @@ h1 {
   background-color: #97D700 !important; /* Slightly darker green on hover */
 }
 
+.flip-card, 
+.flip-card .card-body, 
+.flip-card p, 
+.flip-card h5 {
+  font-family: "DM Sans", sans-serif !important;
+}
+
+.flip-card {
+  width: 100%;
+  height: 250px; /* Set a fixed height to prevent stretching */
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #FFCFDF;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: absolute; /* Ensure proper stacking */
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Keeps it on top */
+  backface-visibility: hidden; /* Ensures proper flipping */
+}
+
+
+.flip-card-back {
+  background-color: #FF66C4;
+  color: #393E46; /* Add # to ensure proper color */
+  transform: rotateY(180deg);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
   </style>
 </head>
 
@@ -89,8 +163,11 @@ h1 {
                         <a class="nav-link" href="#skills">Learnings</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact Me</a>
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
                     </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#contact">Contact Me</a>
+                  </li>
                 </ul>
             </div>
         </div>
@@ -123,7 +200,7 @@ h1 {
             <p class="lead mb-4">Hi, I'm Eliza!</p>
             <p>I'm eager to learn and explore new things. Recently, I discovered a newfound passion, <i>coding</i>. I love tackling problems and solving them head on plus the sense of accomplishment after cracking a tough challenge - it's so rewarding, isn't it?
             </p>
-            <p>I'm also studying Digital Marketing at UPOU right now. <i>I know. That's what makes me so nice!</i> Especially with four lovely dogs to take care of, I think I was born to <i>defy gravity.</i> During my free time (do I still have that anymore?), I also create <i>wicked</i> scented candles. But hey, not complaining here! As long as I  <u>never stop learning</u>, I think I know I'm exactly where I'm meant to be - <i>unlimited!</i>✨</p>
+            <p>I'm also studying Digital Marketing at UPOU right now. <i>I know. That's what makes me so nice!</i> Especially with four lovely dogs to take care of, I think I was born to <i>defy gravity.</i> During my free time (do I still have that anymore?), I also create <i>wicked</i> scented candles . But hey, not complaining here! As long as I  <u>never stop learning</u>, I think I know I'm exactly where I'm meant to be - <i>unlimited!</i>✨</p>
             </p>
             
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
@@ -141,7 +218,19 @@ h1 {
     <div id="skills" class="px-4 pt-5 pb-5 my-5 text-center border-bottom gradient-background">
       <h1 class="display-4 fw-bold text-body-emphasis mb-4">My Recent Learnings</h1>
   
-      <div class="col-lg-8 mx-auto"> <!-- Made it wider for better readability -->
+          <div class="col-lg-8 mx-auto"> 
+              <p class="lead fw-semibold">100 Days of Code: The Complete Python Pro Bootcamp</p>
+              <p class="text-muted">Udemy / The App Brewery (Mar 2025)</p>
+          </div>
+          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-4">    
+            <a href="https://www.udemy.com/certificate/UC-3194b34f-515c-4946-8033-2017bc11e9eb/?utm_campaign=email&utm_medium=email&utm_source=sendgrid.com" 
+               class="btn btn-custom btn-lg px-4" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              View Credential
+            </a>
+        </div>    
+          <div class="col-lg-8 mx-auto">
           <div class="mb-5">
               <p class="lead fw-semibold">Principles of Graphic Design</p>
               <p class="text-muted">University of the Philippines Open University (Feb 2025)</p>
@@ -163,7 +252,73 @@ h1 {
       </div>
   </div>
   
-    
+  <div id="testimonials" class="container my-5">
+    <h1 class="text-center mb-4">What People Say About Me</h1>
+  
+    <div class="row g-4 justify-content-center"> <!-- g-4 adds spacing between columns -->
+      
+      <!-- Card 1 -->
+      <div class="col-md-4 d-flex align-items-stretch">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card shadow-sm border-0 p-4 text-center">
+                <p class="fs-5">"Eliza was a managers dream! "</p>
+                <h5 class="fw-bold mt-3">- Mark P.</h5>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="card shadow-sm border-0 p-4 text-center">
+                <p class="fs-5">"Her general problem solving/critical thinking skills and experience in eCommerce and analytics made her a lynchpin in our organization. "</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="col-md-4 d-flex align-items-stretch">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card shadow-sm border-0 p-4 text-center">
+                <p class="fs-5">"Her professionalism, communication skills, ability to handle difficult issues, reliability, and friendliness all exceeded expectations."</p>
+                <h5 class="fw-bold mt-3">- Chansoo S.</h5>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="card shadow-sm border-0 p-4 text-center">
+                <p class="fs-5">"It provided great comfort to know that whenever she was on shift, she would execute the best possible actions, minimizing our losses, while providing a memorable customer experience."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+      <!-- Card 3 -->
+      
+      <div class="col-md-4 d-flex align-items-stretch">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <div class="card shadow-sm border-0 p-4 text-center">
+                <p class="fs-5">"Eliza is one of the most reliable and accountable employees!"</p>
+                <h5 class="fw-bold mt-3">- Mari T.</h5>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="card shadow-sm border-0 p-4 text-center">
+                <p class="fs-5">"She has a fantastic attitude even when doing the most tedious work. She is a pleasure to work with and someone you can count on."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- End row -->
+  </div> <!-- End container -->
+  
+  
       <div id="contact" class="px-4 pt-5 pb-5 my-5 text-center border-bottom" style="background-color: #FFE3E1;">
         <h1 class="display-4 fw-bold text-body-emphasis">Contact Me!</h1>
     
